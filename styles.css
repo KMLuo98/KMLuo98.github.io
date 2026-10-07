@@ -207,6 +207,9 @@ h3 { font-size: 1rem; line-height: 1.55; margin: 0 0 .45rem; font-weight: 600; }
 .about-email { margin: 0; padding: 1.1rem 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
 .about-email a { margin-left: .4rem; overflow-wrap: anywhere; text-decoration: none; }
 .about-email a:hover { text-decoration: underline; }
+.pdf-link { display: inline-flex; align-items: center; gap: .28rem; margin-left: .2rem; color: var(--accent); text-decoration: none; white-space: nowrap; }
+.pdf-link:hover { text-decoration: underline; }
+.pdf-icon { display: inline-grid; place-items: center; width: 1.15rem; height: 1.25rem; border: 1px solid #c87979; border-radius: 2px; color: #b04f55; font: 700 .47rem/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: -.02em; }
 
 /* Activities: image-led summaries and a quiet long-form reading page. */
 .activity-card { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 6px; color: var(--ink); text-decoration: none; background: #fff; }
