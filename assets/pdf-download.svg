@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PDF download">
+  <path d="M14 5h25l13 13v39H14z" fill="#fff" stroke="#333" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M39 5v14h13" fill="none" stroke="#333" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M31.5 25v20M23 37l8.5 9 8.5-9" fill="none" stroke="#dd4747" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 53h25" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+  <text x="32" y="59" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#333">PDF</text>
+</svg>
