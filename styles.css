@@ -276,4 +276,12 @@ nav { margin-left: auto; }
 .activity-row > .activity-image { width:120px; height:82px; object-fit:cover; grid-column:1 / -1; border-radius:4px; }
 .activity-row:has(> .activity-image) { grid-template-columns:3.5rem 1fr; }
 @media (min-width:700px) { .activity-row > .activity-image { grid-column:2; grid-row:1; width:180px; height:120px; justify-self:end; margin-left:1rem; } .activity-row > .activity-image + .activity-row-body { grid-column:2; padding-right:210px; } }
+/* Publication-style outreach entry */
+.outreach-item { display:grid; grid-template-columns:3.5rem 1fr; gap:1.25rem; padding:1.35rem 0 1.5rem; border-top:1px solid var(--line); background:transparent; border-radius:0; }
+.outreach-item:last-child { border-bottom:1px solid var(--line); }
+.outreach-item .activity-number { padding-top:.35rem; }
+.outreach-item-body h3 { margin:.35rem 0 .65rem; font-family:Georgia,serif; font-size:clamp(1.15rem,2.2vw,1.55rem); font-weight:400; color:var(--accent); line-height:1.35; }
+.outreach-item-body p { margin:0 0 .7rem; font-size:.95rem; line-height:1.55; }
+.outreach-item-body .muted { color:var(--muted); font-size:.88rem; }
+.outreach-item-body a { color:var(--accent); font-size:.9rem; }
 
