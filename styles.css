@@ -284,4 +284,7 @@ nav { margin-left: auto; }
 .outreach-item-body p { margin:0 0 .7rem; font-size:.95rem; line-height:1.55; }
 .outreach-item-body .muted { color:var(--muted); font-size:.88rem; }
 .outreach-item-body a { color:var(--accent); font-size:.9rem; }
+/* Outreach entries are deliberately borderless. */
+.outreach-item,
+.outreach-item:last-child { border: 0 !important; border-radius: 0 !important; background: transparent !important; }
 
