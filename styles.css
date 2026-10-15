@@ -287,4 +287,7 @@ nav { margin-left: auto; }
 /* Outreach entries are deliberately borderless. */
 .outreach-item,
 .outreach-item:last-child { border: 0 !important; border-radius: 0 !important; background: transparent !important; }
+/* Journal names in outreach metadata */
+.outreach-item [data-i18n="outreachMetaPublication"],
+.outreach-item [data-i18n="outreach2MetaPublication"] { font-style: italic; }
 
