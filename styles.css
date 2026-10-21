@@ -292,3 +292,7 @@ nav { margin-left: auto; }
 .outreach-item [data-i18n="outreach2MetaPublication"] { font-style: italic; }
 .apps-menu{position:relative;font-size:.875rem;color:#46515a}.apps-menu summary{cursor:pointer;padding:.6rem 0;list-style:none}.apps-menu summary::after{content:' ▾'}.apps-dropdown{position:absolute;right:0;top:100%;min-width:245px;padding:.5rem 1rem;background:white;border:1px solid var(--line);box-shadow:0 8px 24px #20384812;z-index:20}.apps-dropdown a{display:block;padding:.65rem 0;line-height:1.5}.application-entry{padding:0 0 1.5rem;margin:0 0 1.5rem;border-bottom:1px solid var(--line)}.application-entry:last-child{border:0;margin-bottom:0}.application-entry h3{font:400 1.5rem/1.4 Georgia,serif;margin:0 0 .7rem}.application-entry p{line-height:1.65}.app-credit{font-size:.8rem;margin-top:.75rem}@media(max-width:600px){.apps-menu summary{padding:.4rem 0}.apps-dropdown{left:0;right:auto;min-width:220px}}
 
+.application-features section { margin:2rem 0; }
+.application-features h2 { font-size:1.35rem; margin-bottom:.7rem; line-height:1.4; }
+.application-features p { line-height:1.85; }
+
