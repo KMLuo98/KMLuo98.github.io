@@ -295,4 +295,12 @@ nav { margin-left: auto; }
 .application-features section { margin:2rem 0; }
 .application-features h2 { font-size:1.35rem; margin-bottom:.7rem; line-height:1.4; }
 .application-features p { line-height:1.85; }
+.bio-entry { margin:0 0 1.65rem; padding:0 0 1.4rem; border-bottom:1px solid var(--line); }
+.bio-entry:last-child { border:0; margin-bottom:0; padding-bottom:0; }
+.bio-heading { display:flex; justify-content:space-between; align-items:baseline; gap:1.5rem; }
+.bio-heading h3 { margin:0; font-size:1.08rem; line-height:1.5; font-weight:500; color:var(--accent); }
+.bio-heading span { white-space:nowrap; font-size:.85rem; color:var(--muted); }
+.bio-entry p { margin:.4rem 0 0; line-height:1.6; }
+.bio-entry .muted { font-size:.85rem; }
+@media(max-width:600px) { .bio-heading { flex-direction:column; gap:.25rem; } }
 
