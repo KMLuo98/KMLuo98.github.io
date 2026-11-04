@@ -304,3 +304,8 @@ nav { margin-left: auto; }
 .bio-entry .muted { font-size:.85rem; }
 @media(max-width:600px) { .bio-heading { flex-direction:column; gap:.25rem; } }
 
+.bio-with-logo { display:grid; grid-template-columns:64px minmax(0,1fr); gap:1.25rem; align-items:start; }
+.university-seal { display:block; width:64px; height:64px; object-fit:contain; padding:5px; background:#fff; border:1px solid var(--line); border-radius:14px; box-sizing:border-box; }
+.bio-body { min-width:0; }
+@media(max-width:600px) { .bio-with-logo { grid-template-columns:52px minmax(0,1fr); gap:.85rem; } .university-seal { width:52px; height:52px; } }
+
