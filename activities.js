@@ -4,19 +4,31 @@
   const text=v=>typeof v==='string'?v:(v?.[lang()]||v?.en||'');
   const el=(tag,cls,value)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(value)n.textContent=value;return n};
   const date=v=>new Intl.DateTimeFormat(lang()==='zh'?'zh-CN':'en',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'}).format(new Date(`${v}T00:00:00Z`));
-  const row = (item, index) => {
-    const link = el('a', 'activity-row');
+  const row = (item, index, archive) => {
+    const link = el('a', archive ? 'activity-preview' : 'activity-row');
     link.href = './activity.html?id=' + encodeURIComponent(item.id);
     const number = el('span', 'activity-number', String(index + 1).padStart(2, '0'));
     number.setAttribute('aria-hidden', 'true');
     const body = el('div', 'activity-row-body');
     const timestamp = el('time', 'activity-date', date(item.date));
     timestamp.dateTime = item.date;
-    const heading = document.querySelector('[data-activities="archive"]') ? 'h2' : 'h3';
+    const heading = archive ? 'h2' : 'h3';
     body.append(timestamp, el(heading, 'activity-row-title', text(item.title)),
       el('p', 'activity-subtitle', text(item.subtitle)),
       el('span', 'activity-read-more', lang() === 'zh' ? '查看详情 →' : 'Read more →'));
-    link.append(number, body);
+    if (archive) {
+      const photo = item.images?.[0];
+      if (photo) {
+        const cover = el('img', 'activity-preview-image');
+        cover.src = photo.src;
+        cover.alt = text(photo.alt);
+        cover.loading = 'lazy';
+        link.append(cover);
+      }
+      link.append(body);
+    } else {
+      link.append(number, body);
+    }
     return link;
   };
   const labels = [...document.querySelectorAll('[data-activity-zh]')].map(node => [node, node.textContent]);
@@ -25,7 +37,7 @@
     labels.forEach(([node, english]) => { node.textContent = chinese ? node.dataset.activityZh : english; });
     for (const mode of ['latest', 'archive']) {
       const list = document.querySelector('[data-activities="' + mode + '"]');
-      if (list && activities.length) list.replaceChildren(...activities.map(row));
+      if (list && activities.length) list.replaceChildren(...activities.map((item, index) => row(item, index, mode === 'archive')));
     }
     if (document.querySelector('[data-activities="archive"], [data-activities="detail"]')) {
       document.documentElement.lang = chinese ? 'zh-CN' : 'en';
