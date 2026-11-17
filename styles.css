@@ -304,7 +304,14 @@ nav { margin-left: auto; }
 .bio-body { min-width:0; }
 @media(max-width:600px) { .bio-with-logo { grid-template-columns:52px minmax(0,1fr); gap:.85rem; } .university-seal { width:52px; height:52px; } }
 
-.activity-archive { max-width: 52rem; }
-.activity-archive .activity-row:focus-visible { outline-offset: 3px; }
+.activity-archive { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; }
+.activity-preview { display:flex; flex-direction:column; min-width:0; border:1px solid var(--line); border-radius:6px; overflow:hidden; color:inherit; text-decoration:none; }
+.activity-preview:hover { text-decoration:none; border-color:#a0b6c5; }
+.activity-preview:focus-visible { outline-offset:3px; }
+.activity-preview-image { display:block; width:100%; aspect-ratio:16/10; object-fit:cover; background:#f2f6f9; }
+.activity-preview .activity-row-body { display:flex; flex-direction:column; flex:1; padding:1.15rem 1.3rem; }
+.activity-preview .activity-subtitle { margin:0 0 .8rem; }
+.activity-preview .activity-read-more { margin-top:auto; }
+@media(max-width:680px) { .activity-archive { grid-template-columns:1fr; } }
 @media (max-width: 600px) { .activity-row { grid-template-columns: 1.8rem minmax(0, 1fr); gap: .65rem; } }
 
