@@ -87,13 +87,24 @@
     const features = document.getElementById('app-features');
     featureNav.replaceChildren();
     features.replaceChildren();
-    for (const [key, title, bullets] of content.features) {
+    for (const [key, title, bullets, resource] of content.features) {
       const link = make('a', title);
       link.href = '#feature-' + key;
       featureNav.append(link);
       const section = make('section', null, 'app-feature');
       section.id = 'feature-' + key;
-      section.append(make('h3', title), list(bullets));
+      const items = list(bullets);
+      if (resource) {
+        const [label, url] = resource;
+        const item = make('li');
+        const reference = make('a', label);
+        reference.href = url;
+        reference.target = '_blank';
+        reference.rel = 'noopener';
+        item.append(reference);
+        items.append(item);
+      }
+      section.append(make('h3', title), items);
       features.append(section);
     }
     detail.hidden = false;
