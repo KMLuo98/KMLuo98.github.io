@@ -1,2 +1,61 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Applications | Kaiming Luo</title><link rel="stylesheet" href="./styles.css?v=20261022"><script src="./application-details.js?v=20261022" defer></script><script src="./applications.js?v=20261022" defer></script></head><body><header class="site-header"><div class="header-inner"><a href="./index.html#applications" data-app-text="back">← Back to homepage</a><select id="app-language" aria-label="Language"><option value="en">English</option><option value="zh">中文</option></select></div></header><main class="page activity-detail-page" id="application-detail"><header class="activity-detail-header"><p class="eyebrow" data-app-text="section">Applications</p><h1 id="app-heading"></h1></header><div class="activity-prose"><p id="app-intro"></p><div id="app-features" class="application-features"></div><p><a id="app-open" target="_blank" rel="noopener" data-app-text="open">Open application ↗</a></p><p class="muted app-credit" data-app-text="credit">Developed with Codex.</p></div></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Features, interface previews, and getting started with Paper Atlas and Mail Atlas.">
+  <title>Applications | Kaiming Luo</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./application.css?v=20261118">
+  <script src="./application-details.js?v=20261118" defer></script>
+  <script src="./applications.js?v=20261118" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#application-detail" data-app-text="skip">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner application-header">
+      <a href="./index.html#applications" data-app-text="back">← Back to homepage</a>
+      <label class="application-language">
+        <span class="sr-only" data-app-text="language">Language</span>
+        <select id="app-language">
+          <option value="en" lang="en">English</option>
+          <option value="zh" lang="zh-CN">中文</option>
+        </select>
+      </label>
+    </div>
+  </header>
+  <main class="page application-page" id="application-detail" hidden>
+    <header class="application-hero">
+      <p class="eyebrow" data-app-text="section">Applications</p>
+      <h1 id="app-heading"></h1>
+      <p id="app-intro"></p>
+      <ul id="app-highlights" class="app-highlights"></ul>
+      <a class="button app-launch" id="app-open" target="_blank" rel="noopener" data-app-text="open">Open application ↗</a>
+    </header>
+    <section class="app-section" aria-labelledby="app-gallery-heading">
+      <h2 id="app-gallery-heading" data-app-text="gallery">Interface preview</h2>
+      <p class="app-gallery-note muted" data-app-text="galleryNote">Screenshots of the interface with fictional sample data. Select a screenshot to open it at full size.</p>
+      <div id="app-gallery" class="app-gallery"></div>
+    </section>
+    <section class="app-section" aria-labelledby="app-features-heading">
+      <h2 id="app-features-heading" data-app-text="features">Features</h2>
+      <nav id="app-feature-nav" class="app-feature-nav" aria-labelledby="app-features-heading"></nav>
+      <div id="app-features" class="application-features"></div>
+    </section>
+    <section class="app-section" aria-labelledby="app-start-heading">
+      <h2 id="app-start-heading" data-app-text="start">Getting started</h2>
+      <ol id="app-steps" class="app-steps"></ol>
+    </section>
+    <footer class="application-footer muted">
+      <span class="app-credit" data-app-text="credit">Developed with Codex.</span>
+      <a href="./index.html#applications" data-app-text="allApps">All applications →</a>
+    </footer>
+  </main>
+  <section class="page application-not-found" id="application-not-found" hidden>
+    <h1 data-app-text="notFound">Project not found</h1>
+    <a href="./index.html#applications" data-app-text="allApps">All applications →</a>
+  </section>
+  <noscript><p class="page">Enable JavaScript to read the project overview, or open <a href="https://kmluo98.github.io/paper-atlas/">Paper Atlas</a> or <a href="https://kmluo98.github.io/mail/">Mail Atlas</a>.</p></noscript>
+</body>
+</html>
 
